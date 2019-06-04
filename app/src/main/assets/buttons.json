@@ -1,0 +1,30 @@
+{
+	"buttons":[
+			{
+				"title":"독도에 관한 소개",
+				"explain":"기본적인 독도의 정보를 확인 할 수 있어요!",
+				"icon":"ic_island"
+			},
+			{
+				"title":"독도로 가는 방법",
+				"explain":"독도로 가는 방법을 확인 할 수 있어요!",
+				"icon":"ic_road"
+			},
+			{
+				"title":"아름다운 독도의 자연환경",
+				"explain":"독도에서 직접 촬영한 이미지들을\n확인 할 수 있어요!",
+				"icon":"ic_picture"
+			},
+			{
+				"title":"독도의 날씨",
+				"explain":"독도의 날씨 정보를 확인할 수 있어요!",
+				"icon":"ic_weather"
+			},
+			{
+				"title":"독도 뉴스",
+				"explain":"독도와 관련한 소식들을 확인 할 수 있어요!",
+				"icon":"ic_newspaper"
+
+			}
+	]
+}
