@@ -1,5 +1,6 @@
 package kr.hs.dgsw.jin_um.dokdo;
 
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -98,22 +99,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     public void changePage(View v){
+        Intent i = new Intent();
         switch(v.getId()){
             case R.id.cardViewIntroduction :
-                Log.i("MAIN","introduction");
+                i = new Intent(MainActivity.this, IntroductionActivity.class);
                 break;
             case R.id.cardViewRoad :
-                Log.i("MAIN","road");
+                i = new Intent(MainActivity.this, RoadActivity.class);
                 break;
             case R.id.cardViewPicture :
-                Log.i("MAIN", "picture");
+                i = new Intent(MainActivity.this, PictureActivity.class);
                 break;
             case R.id.cardViewWeather :
-                Log.i("MAIN", "weather");
+                i = new Intent(MainActivity.this, WeatherActivity.class);
                 break;
             case R.id.cardViewNews :
-                Log.i("MAIN","news");
+                i = new Intent(MainActivity.this, NewsActivity.class);
                 break;
         }
+        startActivity(i);
     }
 }
