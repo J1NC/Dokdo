@@ -1,9 +1,43 @@
 package kr.hs.dgsw.jin_um.dokdo.Model;
 
 public class WeatherBean {
-    private String temperature;
-    private String weather;
+    private String temperatureAM;
+    private String weatherAM;
+    private String temperaturePM;
+    private String weatherPM;
     private String day;
+
+    public String getTemperatureAM() {
+        return temperatureAM;
+    }
+
+    public void setTemperatureAM(String temperatureAM) {
+        this.temperatureAM = temperatureAM;
+    }
+
+    public String getWeatherAM() {
+        return weatherAM;
+    }
+
+    public void setWeatherAM(String weatherAM) {
+        this.weatherAM = weatherAM;
+    }
+
+    public String getTemperaturePM() {
+        return temperaturePM;
+    }
+
+    public void setTemperaturePM(String temperaturePM) {
+        this.temperaturePM = temperaturePM;
+    }
+
+    public String getWeatherPM() {
+        return weatherPM;
+    }
+
+    public void setWeatherPM(String weatherPM) {
+        this.weatherPM = weatherPM;
+    }
 
     public String getDay() {
         return day;
@@ -13,30 +47,11 @@ public class WeatherBean {
         this.day = day;
     }
 
-    public String getTemperature() {
-        return temperature;
-    }
-
-    public void setTemperature(String temperature) {
-        this.temperature = temperature;
-    }
-
-    public String getWeather() {
-        return weather;
-    }
-
-    public void setWeather(String weather) {
-        this.weather = weather;
-    }
-
-    public WeatherBean(String temperature, String weather) {
-        this.temperature = temperature;
-        this.weather = weather;
-    }
-
-    public WeatherBean(String temperature, String weather,String day) {
-        this.temperature = temperature;
-        this.weather = weather;
+    public WeatherBean(String temperatureAM, String weatherAM, String temperaturePM, String weatherPM, String day) {
+        this.temperatureAM = temperatureAM;
+        this.weatherAM = weatherAM;
+        this.temperaturePM = temperaturePM;
+        this.weatherPM = weatherPM;
         this.day = day;
     }
 }
