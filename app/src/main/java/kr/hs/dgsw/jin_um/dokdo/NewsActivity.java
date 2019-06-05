@@ -15,8 +15,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import kr.hs.dgsw.jin_um.dokdo.Adapter.NewsAdapter;
 import kr.hs.dgsw.jin_um.dokdo.Model.NewsBean;
-import kr.hs.dgsw.jin_um.dokdo.Model.WeatherBean;
 
 public class NewsActivity extends AppCompatActivity {
 

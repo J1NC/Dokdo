@@ -1,4 +1,4 @@
-package kr.hs.dgsw.jin_um.dokdo;
+package kr.hs.dgsw.jin_um.dokdo.Adapter;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 
 import kr.hs.dgsw.jin_um.dokdo.Model.NewsBean;
+import kr.hs.dgsw.jin_um.dokdo.R;
+import kr.hs.dgsw.jin_um.dokdo.ViewHolder.NewsItemViewHolder;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsItemViewHolder>  {
 
