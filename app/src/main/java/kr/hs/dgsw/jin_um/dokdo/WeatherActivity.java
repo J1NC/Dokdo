@@ -55,7 +55,7 @@ public class WeatherActivity extends AppCompatActivity {
                 for(int i = 0 ; i < elementsTemperature.size() ; i += 2){
                     WeatherBean weatherBean =
                             new WeatherBean(elementsTemperature.get(i).text(), elementsWeather.get(i).text(),
-                                    elementsTemperature.get(i+1).text(), elementsWeather.get(i).text(),
+                                    elementsTemperature.get(i+1).text(), elementsWeather.get(i+1).text(),
                                     elementsDay.get(dayCount).text());
                     lists.add(weatherBean);
 

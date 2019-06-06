@@ -50,7 +50,7 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherItemViewHolder> 
     private int getIcon(String weather){
         int id = 0;
 
-        String arr[] = weather.split("강");
+        String arr[] = weather.split("강수");
         switch (arr[0].trim()){
             case "맑음" : id = R.drawable.ic_sun;
                 break;
