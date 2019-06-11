@@ -56,6 +56,7 @@ public class WeatherAdapter extends RecyclerView.Adapter<WeatherItemViewHolder> 
                 break;
             case "구름많음" : id = R.drawable.ic_sun_cloud;
                 break;
+            case "구름많고 비" :
             case "흐리고 비" :
             case "흐리고 한때 비" : id = R.drawable.ic_rain;
                 break;
