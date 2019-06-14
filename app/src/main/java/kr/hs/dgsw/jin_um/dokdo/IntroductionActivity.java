@@ -16,7 +16,6 @@ public class IntroductionActivity extends AppCompatActivity {
 
     public void changeTabIntroduction(View v){
         Intent intent = new Intent();
-        intent.putExtra("depth", DEPTH);
 
         switch (v.getId()){
             case R.id.cardViewIntroductionPlace : intent =  new Intent(this, IntroductionPlaceActivity.class);
@@ -24,7 +23,7 @@ public class IntroductionActivity extends AppCompatActivity {
             case R.id.cardViewIntroductionView : intent = new Intent(this, IntroductionViewActivity.class);
             break;
         }
-
+        intent.putExtra("depth", DEPTH);
         startActivity(intent);
     }
 }
