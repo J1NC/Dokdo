@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class IntroductionActivity extends AppCompatActivity {
+    private final int DEPTH = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +16,7 @@ public class IntroductionActivity extends AppCompatActivity {
 
     public void changeTabIntroduction(View v){
         Intent intent = new Intent();
+        intent.putExtra("depth", DEPTH);
 
         switch (v.getId()){
             case R.id.cardViewIntroductionPlace : intent =  new Intent(this, IntroductionPlaceActivity.class);
