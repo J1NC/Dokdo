@@ -21,10 +21,12 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewTitle[], textViewEx[];
     private ImageView imageViewIcon[];
     private HashMap hashMapIcon = new HashMap<String, Integer>();
+    private DokdoHelper dokdoHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        dokdoHelper = new DokdoHelper(this,"userdb",null,1);
         init();
         btnSetting();
     }
@@ -57,6 +59,8 @@ public class MainActivity extends AppCompatActivity {
         hashMapIcon.put("ic_picture", R.drawable.ic_picture);
         hashMapIcon.put("ic_weather", R.drawable.ic_weather);
         hashMapIcon.put("ic_newspaper", R.drawable.ic_newspaper);
+
+        dokdoHelper.initialize();
     }
 
     private void btnSetting(){
