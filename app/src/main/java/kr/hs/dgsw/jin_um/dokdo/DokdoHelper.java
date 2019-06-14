@@ -15,9 +15,9 @@ public class DokdoHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "create table dokdo(depth1 integer primary key, depth2 integer primary key, explanation text)";
+        String sql = "create table dokdo(idx integer primary key, depth1 integer, depth2 integer, explanation text)";
         db.execSQL(sql);
-        sql = "create table dokdo_picture(depth1 integer primary key, depth2 integer primary key, picture biginteger primary key, explanation text)";
+        sql = "create table dokdo_picture(idx integer primary key, depth1 integer, depth2 integer, picture biginteger, explanation text)";
         db.execSQL(sql);
     }
 
@@ -52,7 +52,7 @@ public class DokdoHelper extends SQLiteOpenHelper {
 
     public String getExplanation(int depth1, int depth2){
         SQLiteDatabase db = getReadableDatabase();
-        String sql = "select * from dokdo where depth1 = " + depth1 + ", depth2 = " + depth2;
+        String sql = "select * from dokdo where depth1 = " + depth1 + " and depth2 = " + depth2;
         Cursor cursor = db.rawQuery(sql, null);
 
         if(cursor.moveToNext()){
