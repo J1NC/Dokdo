@@ -13,7 +13,7 @@ public class PictureSceneryActivity extends AppCompatActivity {
     private DokdoHelper dokdoHelper;
     private ImageAdapter imageAdapter;
     private ViewPager viewPager;
-    private List<Integer> images;
+    private List<String> images;
     private List<String> imagesDescription;
 
     @Override

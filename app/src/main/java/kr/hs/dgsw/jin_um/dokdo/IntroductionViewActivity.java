@@ -15,7 +15,7 @@ public class IntroductionViewActivity extends AppCompatActivity {
     private String explanation, title;
     private ImageAdapter imageAdapter;
     private ViewPager viewPager;
-    private List<Integer> images;
+    private List<String> images;
     private List<String> imagesDescription;
 
     @Override

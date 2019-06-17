@@ -11,10 +11,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.List;
 
 public class ImageAdapter extends PagerAdapter {
-    private List<Integer> images;
+    private List<String> images;
     private List<String> imagesDescription;
     private LayoutInflater layoutInflater;
     private Context context;
@@ -36,7 +38,7 @@ public class ImageAdapter extends PagerAdapter {
         View v = layoutInflater.inflate(R.layout.slider, container, false);
         ImageView imageView = (ImageView) v.findViewById(R.id.imageViewSlider);
         TextView textView = (TextView) v.findViewById(R.id.textViewDescriptSlider);
-        imageView.setImageResource(images.get(position));
+        Glide.with(v).load(images.get(position)).into(imageView);
         if(imagesDescription != null)
             textView.setText(imagesDescription.get(position));
         container.addView(v);
@@ -48,7 +50,7 @@ public class ImageAdapter extends PagerAdapter {
         container.invalidate();
     }
 
-    public ImageAdapter(Context context, List<Integer> images, List<String> imagesDescription){
+    public ImageAdapter(Context context, List<String> images, List<String> imagesDescription){
         this.context = context;
         this.images = images;
         this.imagesDescription = imagesDescription;

@@ -20,7 +20,7 @@ public class DokdoHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String sql = "create table dokdo(idx integer primary key, depth1 integer, depth2 integer, title text, explanation text)";
         db.execSQL(sql);
-        sql = "create table dokdo_picture(idx integer primary key, depth1 integer, depth2 integer, picture biginteger, explanation text)";
+        sql = "create table dokdo_picture(idx integer primary key, depth1 integer, depth2 integer, picture text, explanation text)";
         db.execSQL(sql);
     }
 
@@ -86,20 +86,23 @@ public class DokdoHelper extends SQLiteOpenHelper {
                         "생성된 잔적토로서 30도 이상의 급격한 경사를 이루고\n" +
                         "있고, 토성은 사양질이며 흑갈색 또는 암갈색을 띠고 있다.\n\n" +
                         "자연생태\n" +
-                        "독도는 화산압체로 이루어져 있어 식물이 잘 자랄 수 있는\n" +
-                        "환경은 아니다 또한 섬의 경사가 심하여 비가 내려도\n" +
-                        "빗물이 섬의 비탈을 따라 흘러 버리기 때문에 토양이 건조한\n" +
-                        "편이다. 하지만 또 다른 화산지형인 제주도나 울릉도에 비해\n" +
-                        "형성시기가 빠르고, 남해와 서해에서는 볼 수 없는 대양섬으로서\n" +
-                        "생물학적 가치가 높다. 독도에는 현재 50-60여 종 내외의 식물이\n" +
-                        "조사되어 있으며 대부분 은 초본이지만 몇몇 목본 식물도\n" +
-                        "서식하고 있다. 독도에서 자생하고 있는 식물종 중 원식생을\n" +
-                        "유지하는 식물종은 도깨비 쇠고비, 땅채송화, 해국 등이 있다.\n\n" +
-                        "독도는 난류와 한류가 교차하고 있어 다양한 어종이 모여드는\n" +
-                        "황금어장을 성하고 있다. 더욱이 바위마다 미역, 다시마, 파래등의\n" +
-                        "해조류가 서식하고 있으며, 대표적인 어류는 오징어, 꽁치, 방어,\n" +
-                        "복어, 전어, 가자미 등이 있다. 그외에도 전복, 소라, 홍합 등의\n" +
-                        "조개류와 해삼, 새우, 홍게 등이 서식하고 있다.");
+                        "독도는 화산암체로 이루어져 있어 식물이 잘 자랄 수 있는\n" +
+                        "환경은 아니다. 또한 섬의 경사가 심하여 비가 내려도\n" +
+                        "빗물이 섬의 비탈을 따라 흘러 버리기 때문에 토양이\n" +
+                        "건조한 편이다. 하지만 또 다른 화산지형인 제주도나\n" +
+                        "울릉도에 비해 형성시기가 빠르고, 남해와 서해에서는\n" +
+                        "볼 수 없는 대양섬으로서생물학적 가치가 높다.\n" +
+                        "독도에는 현재 50-60여 종 내외의 식물이 조사되어\n" +
+                        "있으며 대부분은 초본이지만 몇몇 목본 식물도\n" +
+                        "서식하고 있다.\n" +
+                        "독도에서 자생하고 있는 식물종 중 원식생을 유지하는\n" +
+                        "식물종은 도깨비 쇠고비, 땅채송화, 해국 등이 있다.\n\n" +
+                        "독도는 난류와 한류가 교차하고 있어 다양한 어종이\n" +
+                        "모여드는 황금어장을 성하고 있다.\n" +
+                        "더욱이 바위마다 미역, 다시마, 파래등의 해조류가\n" +
+                        "서식하고 있으며, 대표적인 어류는 오징어, 꽁치, 방어,\n" +
+                        "복어, 전어, 가자미 등이 있다. 그외에도 전복, 소라,\n" +
+                        "홍합 등의조개류와 해삼, 새우, 홍게 등이 서식하고 있다.");
 
         db.insert("dokdo",null,value);
 
@@ -166,124 +169,124 @@ public class DokdoHelper extends SQLiteOpenHelper {
         value.put("depth1", 1);
         value.put("depth2", 1);
 
-        value.put("picture", R.drawable.introduction_place_image_1);
+        value.put("picture", "https://img.sbs.co.kr/newimg/news/20180617/201194757_1280.jpg");
         value.put("explanation", "독도의 모습");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.introduction_place_image_2);
+        value.put("picture", "https://pbs.twimg.com/media/CzMvi1oUkAEp2L0.jpg");
         value.put("explanation", "독도와의 거리");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.introduction_place_image_3);
+        value.put("picture", "http://www.intodokdo.go.kr/img/04_dokdo/dokdo_map.gif");
         value.put("explanation", "동도와 서도");
         db.insert("dokdo_picture", null, value);
 
         value.put("depth2", 2);
 
-        value.put("picture", R.drawable.introduction_view_image_1);
+        value.put("picture", "https://t1.daumcdn.net/cfile/tistory/114D08374FFECC3D28");
         value.put("explanation", "노랑부리백로");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.introduction_view_image_2);
+        value.put("picture", "http://cfile223.uf.daum.net/image/277CFB39574C4A4505E7D7");
         value.put("explanation", "괭이갈매기");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.introduction_view_image_3);
+        value.put("picture", "http://www.ibric.org/upload/board/files/ulleung/ull_3/thumb2/0000753_1.jpg");
         value.put("explanation", "섬장대");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.introduction_view_image_4);
+        value.put("picture", "https://i.ytimg.com/vi/G4UaE1IKqDA/maxresdefault.jpg");
         value.put("explanation", "박주가리");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.introduction_view_image_5);
+        value.put("picture", "http://www.ibric.org/upload/board/files/ulleung/ull_3/thumb2/0000923_7.jpg");
         value.put("explanation", "슬패랭이");
         db.insert("dokdo_picture", null, value);
 
         value.put("depth1", 2);
         value.put("depth2", 1);
 
-        value.put("picture", R.drawable.road_path_image_1);
+        value.put("picture", "http://www.k-dokdo.com/cmsh/k-dokdo.com/new/images/content/img_traffic01.gif");
         value.put("explanation", "울릉도 입도 경로");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.road_path_image_2);
+        value.put("picture", "http://www.k-dokdo.com/cmsh/k-dokdo.com/new/images/content/img_traffic02.gif");
         value.put("explanation", "독도 입도 경로");
         db.insert("dokdo_picture", null, value);
 
         value.put("depth2", 2);
 
-        value.put("picture", R.drawable.road_way_image_1);
+        value.put("picture", "https://t1.daumcdn.net/cfile/tistory/2738D0395264EE1604");
         value.put("explanation", "독도 입도 절차");
         db.insert("dokdo_picture", null, value);
 
         value.put("depth1", 3);
         value.put("depth2", 1);
 
-        value.put("picture", R.drawable.picture_scenery_image_1);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000003236&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.picture_scenery_image_2);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000003473&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.picture_scenery_image_3);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000003475&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.picture_scenery_image_4);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000000646&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.picture_scenery_image_5);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000000643&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
         value.put("depth2", 2);
 
-        value.put("picture", R.drawable.picture_ocean_image_1);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000000689&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.picture_ocean_image_2);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000000687&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.picture_ocean_image_3);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000000685&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.picture_ocean_image_4);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000000688&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.picture_ocean_image_5);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000003367&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
         value.put("depth2", 3);
 
-        value.put("picture", R.drawable.picture_animal_image_1);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000003364&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.picture_animal_image_2);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000003363&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.picture_animal_image_3);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000003343&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.picture_animal_image_4);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000000683&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.picture_animal_image_5);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000000668&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
         value.put("depth2", 4);
 
-        value.put("picture", R.drawable.picture_plant_image_1);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000003258&fileSn=1");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.picture_plant_image_2);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000000662&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.picture_plant_image_3);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000000660&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.picture_plant_image_4);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000000663&fileSn=0");
         db.insert("dokdo_picture", null, value);
 
-        value.put("picture", R.drawable.picture_plant_image_5);
+        value.put("picture", "http://www.k-dokdo.com/icms/file/getImage.do?atchFileId=FILE_000000000000665&fileSn=0");
         db.insert("dokdo_picture", null, value);
     }
 
@@ -309,14 +312,14 @@ public class DokdoHelper extends SQLiteOpenHelper {
         return null;
     }
 
-    public List<Integer> getImages(int depth1, int depth2){
-        List<Integer> images = new ArrayList<>();
+    public List<String> getImages(int depth1, int depth2){
+        List<String> images = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();
         String sql = "select * from dokdo_picture where depth1 = " + depth1 + " and depth2 = " + depth2;
         Cursor cursor = db.rawQuery(sql, null);
 
         while(cursor.moveToNext()){
-            images.add(cursor.getInt(cursor.getColumnIndex("picture")));
+            images.add(cursor.getString(cursor.getColumnIndex("picture")));
         }
         return images;
     }
