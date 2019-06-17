@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 public class IntroductionActivity extends AppCompatActivity {
-    private final int DEPTH = 1;
+    private final int NOW_DEPTH = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class IntroductionActivity extends AppCompatActivity {
             case R.id.cardViewIntroductionView : intent = new Intent(this, IntroductionViewActivity.class);
             break;
         }
-        intent.putExtra("depth", DEPTH);
+        intent.putExtra("depth", NOW_DEPTH);
         startActivity(intent);
     }
 }
