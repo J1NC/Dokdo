@@ -11,8 +11,8 @@ public class IntroductionPlaceActivity extends AppCompatActivity {
     private final int NOW_DEPTH = 1;
     private int PREV_DEPTH;
     private DokdoHelper dokdoHelper;
-    private TextView textViewExplanation;
-    private String explanation;
+    private TextView textViewExplanation, textViewTitle;
+    private String explanation, title;
     private ImageAdapter imageAdapter;
     private ViewPager viewPager;
     private List<Integer> images;
@@ -28,13 +28,17 @@ public class IntroductionPlaceActivity extends AppCompatActivity {
     }
 
     private void init(){
+        textViewTitle = findViewById(R.id.textViewDetailTitle);
         textViewExplanation = findViewById(R.id.textViewDetailEx);
+        viewPager = (ViewPager) findViewById(R.id.imageSliderDetail);
+
+        title = dokdoHelper.getTitle(PREV_DEPTH, NOW_DEPTH);
         explanation = dokdoHelper.getExplanation(PREV_DEPTH, NOW_DEPTH);
         images = dokdoHelper.getImages(PREV_DEPTH, NOW_DEPTH);
         imagesDescription = dokdoHelper.getImageExplanation(PREV_DEPTH, NOW_DEPTH);
-        viewPager = (ViewPager) findViewById(R.id.imageSliderDetail);
         imageAdapter = new ImageAdapter(this, images, imagesDescription);
         viewPager.setAdapter(imageAdapter);
+        textViewTitle.setText(title);
         textViewExplanation.setText(explanation);
     }
 }
