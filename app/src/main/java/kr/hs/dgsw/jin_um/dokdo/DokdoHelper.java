@@ -251,6 +251,23 @@ public class DokdoHelper extends SQLiteOpenHelper {
 
         value.put("picture", R.drawable.picture_ocean_image_5);
         db.insert("dokdo_picture", null, value);
+
+        value.put("depth2", 3);
+
+        value.put("picture", R.drawable.picture_animal_image_1);
+        db.insert("dokdo_picture", null, value);
+
+        value.put("picture", R.drawable.picture_animal_image_2);
+        db.insert("dokdo_picture", null, value);
+
+        value.put("picture", R.drawable.picture_animal_image_3);
+        db.insert("dokdo_picture", null, value);
+
+        value.put("picture", R.drawable.picture_animal_image_4);
+        db.insert("dokdo_picture", null, value);
+
+        value.put("picture", R.drawable.picture_animal_image_5);
+        db.insert("dokdo_picture", null, value);
     }
 
     public String getTitle(int depth1, int depth2){
