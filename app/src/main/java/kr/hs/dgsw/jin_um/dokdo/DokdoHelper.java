@@ -216,6 +216,25 @@ public class DokdoHelper extends SQLiteOpenHelper {
         value.put("picture", R.drawable.road_way_image_1);
         value.put("explanation", "독도 입도 절차");
         db.insert("dokdo_picture", null, value);
+
+        value.put("depth1", 3);
+        value.put("depth2", 1);
+
+        value.put("picture", R.drawable.picture_scenery_image_1);
+        db.insert("dokdo_picture", null, value);
+
+        value.put("picture", R.drawable.picture_scenery_image_2);
+        db.insert("dokdo_picture", null, value);
+
+        value.put("picture", R.drawable.picture_scenery_image_3);
+        db.insert("dokdo_picture", null, value);
+
+        value.put("picture", R.drawable.picture_scenery_image_4);
+        db.insert("dokdo_picture", null, value);
+
+        value.put("picture", R.drawable.picture_scenery_image_5);
+        db.insert("dokdo_picture", null, value);
+
     }
 
     public String getTitle(int depth1, int depth2){
