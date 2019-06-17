@@ -19,6 +19,7 @@
         <activity android:name=".PictureSceneryActivity" />
         <activity android:name=".PictureOceanActivity" />
         <activity android:name=".PictureAnimalActivity" />
+        <activity android:name=".PicturePlantActivity" />
         <activity android:name=".RoadActivity" />
         <activity android:name=".RoadPathActivity"/>
         <activity android:name=".RoadWayActivity" />
