@@ -103,6 +103,40 @@ public class DokdoHelper extends SQLiteOpenHelper {
 
         db.insert("dokdo",null,value);
 
+        value.put("title", "독도로 가는 방법입니다!");
+        value.put("depth1", 2);
+        value.put("depth2", 1);
+        value.put("explanation",
+                "포항<->울릉\n" +
+                        "썬플라워호\n" +
+                        "포항 출항 : 09:50, 울릉 출항 : 15:30\n" +
+                        "소요 시간 : 3시간 10분, 승선 인원 : 920명\n\n" +
+                        "아라퀸즈호\n" +
+                        "포항 출항 : 12:10, 울릉 출항 : 17:30\n" +
+                        "소요 시간 : 3시간 30분, 승선 인원 : 855명\n\n" +
+                        "후포<->울릉\n" +
+                        "씨플라워2호\n" +
+                        "부정기 운행(선사 문의)\n" +
+                        "소요 시간 : 3시간 30분, 승선 인원 : 376명\n\n" +
+                        "독도편 여객선\n" +
+                        "강릉<->울릉\n" +
+                        "씨스타1호\n" +
+                        "부정기 운행(선사 문의)\n" +
+                        "소요 시간 : 2시간 50분, 승선인원 : 443명\n\n" +
+                        "씨스타3호\n" +
+                        "부정기 운행(선사 문의)\n" +
+                        "소요시간 : 3시간, 승선인원 : 587명\n\n" +
+                        "유의사항\n" +
+                        "여객선 운항시간은 해운사의 사정 및 관광성수기,\n" +
+                        "동절기에 따라 변동될 수 있습니다.\n" +
+                        "독도 접안 가능여부는 현지 기상상황에 따라\n" +
+                        "변동될 수 있습니다.\n\n" +
+                        "출발전 반드시 문의\n" +
+                        "-독도 체류시간은 20~30분 정도 (동도 선착장)\n" +
+                        "-기타 독도입도 관련 자세한 문의사항은\n" +
+                        "울릉군 독도 관리 사무소\n" +
+                        "054)790-6645~6/www.ulleung.go.kr");
+
         value = new ContentValues();
         value.put("depth1", 1);
         value.put("depth2", 1);
@@ -139,6 +173,17 @@ public class DokdoHelper extends SQLiteOpenHelper {
 
         value.put("picture", R.drawable.introduction_view_image_5);
         value.put("explanation", "슬패랭이");
+        db.insert("dokdo_picture", null, value);
+
+        value.put("depth1", 2);
+        value.put("depth2", 1);
+
+        value.put("picture", R.drawable.road_path_image_1);
+        value.put("explanation", "울릉도 입도 경로");
+        db.insert("dokdo_picture", null, value);
+
+        value.put("picture", R.drawable.road_path_image_2);
+        value.put("explanation", "독도 입도 경로");
         db.insert("dokdo_picture", null, value);
     }
 
