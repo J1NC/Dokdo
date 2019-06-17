@@ -21,18 +21,18 @@ public class IntroductionPlaceActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_introduction_place);
+        setContentView(R.layout.activity_detail_explanation);
         PREV_DEPTH = getIntent().getIntExtra("depth", -1);
         dokdoHelper = new DokdoHelper(this,"userdb",null,1);
         init();
     }
 
     private void init(){
-        textViewExplanation = findViewById(R.id.textViewExIntroductionPlace);
+        textViewExplanation = findViewById(R.id.textViewDetailEx);
         explanation = dokdoHelper.getExplanation(PREV_DEPTH, NOW_DEPTH);
         images = dokdoHelper.getImages(PREV_DEPTH, NOW_DEPTH);
         imagesDescription = dokdoHelper.getImageExplanation(PREV_DEPTH, NOW_DEPTH);
-        viewPager = (ViewPager) findViewById(R.id.imageSliderIntroductionPlace);
+        viewPager = (ViewPager) findViewById(R.id.imageSliderDetail);
         imageAdapter = new ImageAdapter(this, images, imagesDescription);
         viewPager.setAdapter(imageAdapter);
         textViewExplanation.setText(explanation);
