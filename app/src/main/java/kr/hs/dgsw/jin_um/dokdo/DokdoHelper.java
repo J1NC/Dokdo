@@ -139,6 +139,29 @@ public class DokdoHelper extends SQLiteOpenHelper {
 
         db.insert("dokdo",null,value);
 
+        value.put("depth2", 2);
+        value.put("explanation",
+                "독도 입도에 대한 법적근거\n" +
+                        "독도는 1982년 천연기념물로 지정, 문화재 보호법에 근거하여\n" +
+                        "공개를 제한해 왔으나 제한지역(동도, 서도)중 동도에 한해\n" +
+                        "일반인의 출입이 가능하도록 공개제한을 해제함으로써\n" +
+                        "입도허가제(승인)를 신고제로 전환\n\n" +
+                        "일반관광객\n" +
+                        "신청인: 여객선사 예약 ->\n" +
+                        "여객선사 : 일괄입도 신고 -> 울릉군 : 신고필증 교부\n\n" +
+                        "특수한 목적의 경우\n" +
+                        "행사, 집회, 언론사, 취재, 촬영, 학술조사, 숙박, 체류 등\n\n" +
+                        "신청인 : 신청서 작성 및 신고 -> 울릉군 : 문화재정협의 및\n" +
+                        "신고필증교부 -> 신청인: 입도선편확보\n\n" +
+                        "※문화재정협의\n" +
+                        "입도인원 초과, 행정/학술/경찰/해양경찰업무\n" +
+                        "이외의 숙박 체류\n" +
+                        "동도 선착장의 지역에서의 각종 행사 등\n\n" +
+                        "※울릉군 승인\n" +
+                        "행정/학술/경찰/해양경찰업무의 숙박 체류\n" +
+                        "동도 선착장 내 행사");
+        db.insert("dokdo", null, value);
+
         value = new ContentValues();
         value.put("depth1", 1);
         value.put("depth2", 1);
@@ -186,6 +209,12 @@ public class DokdoHelper extends SQLiteOpenHelper {
 
         value.put("picture", R.drawable.road_path_image_2);
         value.put("explanation", "독도 입도 경로");
+        db.insert("dokdo_picture", null, value);
+
+        value.put("depth2", 2);
+
+        value.put("picture", R.drawable.road_way_image_1);
+        value.put("explanation", "독도 입도 절차");
         db.insert("dokdo_picture", null, value);
     }
 

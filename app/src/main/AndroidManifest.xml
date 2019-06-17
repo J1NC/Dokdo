@@ -18,6 +18,7 @@
         <activity android:name=".PictureActivity" />
         <activity android:name=".RoadActivity" />
         <activity android:name=".RoadPathActivity"/>
+        <activity android:name=".RoadWayActivity" />
         <activity android:name=".IntroductionActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
