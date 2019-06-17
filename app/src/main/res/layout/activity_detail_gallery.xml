@@ -50,7 +50,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        android:text="좌우로 드래그해서 경관을 확인해 보세요"
+        android:text="좌우로 드래그해서 사진들을 확인해 보세요"
         android:textColor="@color/colorPrimary"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
