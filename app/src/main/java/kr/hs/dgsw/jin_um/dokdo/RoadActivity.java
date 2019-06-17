@@ -14,7 +14,7 @@ public class RoadActivity extends AppCompatActivity {
         setContentView(R.layout.activity_road);
     }
 
-    public void changeRoad(View v){
+    public void changeTabRoad(View v){
         Intent intent = new Intent();
 
         switch (v.getId()){
