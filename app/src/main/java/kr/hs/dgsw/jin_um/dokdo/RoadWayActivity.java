@@ -28,9 +28,9 @@ public class RoadWayActivity extends AppCompatActivity {
     }
 
     private void init(){
-        textViewTitle = findViewById(R.id.textViewDetailTitle);
-        textViewExplanation = findViewById(R.id.textViewDetailEx);
-        viewPager = (ViewPager) findViewById(R.id.imageSliderDetail);
+        textViewTitle = findViewById(R.id.textViewDetailExTitle);
+        textViewExplanation = findViewById(R.id.textViewDetailExContent);
+        viewPager = (ViewPager) findViewById(R.id.imageSliderDetailEx);
 
         title = dokdoHelper.getTitle(PREV_DEPTH, NOW_DEPTH);
         explanation = dokdoHelper.getExplanation(PREV_DEPTH, NOW_DEPTH);

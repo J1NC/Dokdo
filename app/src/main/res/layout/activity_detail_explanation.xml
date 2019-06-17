@@ -8,7 +8,7 @@
     tools:context=".IntroductionPlaceActivity">
 
     <TextView
-        android:id="@+id/textViewDetailTitle"
+        android:id="@+id/textViewDetailExTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -27,7 +27,7 @@
         android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewDetailTitle" />
+        app:layout_constraintTop_toBottomOf="@id/textViewDetailExTitle" />
 
     <ScrollView
         android:layout_width="0dp"
@@ -46,7 +46,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textViewDetailEx"
+                android:id="@+id/textViewDetailExContent"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
@@ -58,7 +58,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <view
-                android:id="@+id/imageSliderDetail"
+                android:id="@+id/imageSliderDetailEx"
                 class="android.support.v4.view.ViewPager"
                 android:layout_width="0dp"
                 android:layout_height="300dp"
@@ -67,7 +67,7 @@
                 android:layout_marginEnd="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textViewDetailEx" />
+                app:layout_constraintTop_toBottomOf="@+id/textViewDetailExContent" />
 
         </android.support.constraint.ConstraintLayout>
 

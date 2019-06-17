@@ -1,6 +1,5 @@
 package kr.hs.dgsw.jin_um.dokdo;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -29,9 +28,9 @@ public class RoadPathActivity extends AppCompatActivity {
     }
 
     private void init(){
-        textViewTitle = findViewById(R.id.textViewDetailTitle);
-        textViewExplanation = findViewById(R.id.textViewDetailEx);
-        viewPager = (ViewPager) findViewById(R.id.imageSliderDetail);
+        textViewTitle = findViewById(R.id.textViewDetailExTitle);
+        textViewExplanation = findViewById(R.id.textViewDetailExContent);
+        viewPager = (ViewPager) findViewById(R.id.imageSliderDetailEx);
 
         title = dokdoHelper.getTitle(PREV_DEPTH, NOW_DEPTH);
         explanation = dokdoHelper.getExplanation(PREV_DEPTH, NOW_DEPTH);

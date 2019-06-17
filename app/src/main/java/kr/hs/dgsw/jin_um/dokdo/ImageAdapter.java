@@ -37,6 +37,7 @@ public class ImageAdapter extends PagerAdapter {
         ImageView imageView = (ImageView) v.findViewById(R.id.imageViewSlider);
         TextView textView = (TextView) v.findViewById(R.id.textViewDescriptSlider);
         imageView.setImageResource(images.get(position));
+        if(imagesDescription.size() != 0)
         textView.setText(imagesDescription.get(position));
         container.addView(v);
         return v;
