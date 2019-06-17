@@ -137,6 +137,8 @@ public class DokdoHelper extends SQLiteOpenHelper {
                         "울릉군 독도 관리 사무소\n" +
                         "054)790-6645~6/www.ulleung.go.kr");
 
+        db.insert("dokdo",null,value);
+
         value = new ContentValues();
         value.put("depth1", 1);
         value.put("depth2", 1);
